@@ -30,8 +30,9 @@ class SubjectController extends Controller
     public function create()
     {
         $teachers = Teacher::latest()->get();
+        $newsubject = NewSubject::latest()->get();
 
-        return view('backend.subjects.create', compact('teachers'));
+        return view('backend.subjects.create', compact('teachers','newsubject'));
     }
 
     /**
@@ -79,9 +80,10 @@ class SubjectController extends Controller
      */
     public function edit(Subject $subject)
     {
+        $newsubject = NewSubject::latest()->get();
         $teachers = Teacher::latest()->get();
 
-        return view('backend.subjects.edit', compact('subject','teachers'));
+        return view('backend.subjects.edit', compact('subject','teachers','subject'));
     }
 
     /**

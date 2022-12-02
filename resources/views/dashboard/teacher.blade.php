@@ -12,12 +12,6 @@
                 <span class="leading-tight">Subjects</span>
             </h3>
         </div>
-        <div class="w-full bg-gray-200 text-center border border-gray-300 px-8 py-6 rounded">
-            <h3 class="text-gray-700 uppercase font-bold">
-                <span class="text-4xl">{{ ($teacher->students[0]->students_count) ?? 0 }}</span>
-                <span class="leading-tight">Students</span>
-            </h3>
-        </div>
     </div>
 </div>
 <div class="w-full block mt-8">
@@ -28,7 +22,7 @@
                 @foreach ($teacher->classes as $class)
                     <div class="w-full sm:w-1/2 text-center border border-gray-200 rounded">
                         <div class="text-gray-800 uppercase font-semibold px-4 py-4 mb-2">{{ $class->class_name }}</div>
-                        <a href="{{ route('teacher.attendance.create',$class->id) }}" class="bg-gray-200 inline-block mb-4 text-xs text-gray-600 uppercase font-semibold px-4 py-2 border border-gray-200 rounded">Attendence</a>
+
                     </div>
                 @endforeach
             </div>

@@ -7,6 +7,7 @@ use App\Subject;
 use App\Teacher;
 use Illuminate\Http\Request;
 
+
 class GradeController extends Controller
 {
     /**

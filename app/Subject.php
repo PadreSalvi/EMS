@@ -18,4 +18,12 @@ class Subject extends Model
     {
         return $this->belongsTo(Teacher::class);
     }
+
+    public function newsubject(){
+        return $this->belongsTo(NewSubject::class);
+    }
+
+    // public function NewSubject(){
+    //     return $this->belongsTo(NewSubject::class);
+    // }
 }

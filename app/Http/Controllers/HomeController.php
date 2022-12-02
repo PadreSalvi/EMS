@@ -1,11 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Grade;
 use App\Parents;
-use App\Student;
 use App\Teacher;
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -29,21 +27,28 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        $user = Auth::user();
-        
-        if ($user->hasRole('Admin')) {
+    public function useraccount(){
 
+        $data = User::all();
+
+
+        return view('home',['users' => $data]);
+    }
+    
+     public function index()
+    {
+
+        $user = Auth::user();
+
+        if ($user->hasRole('Admin')) {
             $parents = Parents::latest()->get();
             $teachers = Teacher::latest()->get();
-            $students = Student::latest()->get();
-
-            return view('home', compact('parents','teachers','students'));
+            $users = User::with('roles',)->latest()->paginate(10);
+            return view('home', compact('parents','teachers','users'));
 
         } elseif ($user->hasRole('Teacher')) {
 
-            $teacher = Teacher::with(['user','subjects','classes','students'])->withCount('subjects','classes')->findOrFail($user->teacher->id);
+            $teacher = Teacher::with(['user','subjects','classes'])->withCount('subjects','classes')->findOrFail($user->teacher->id);
 
             return view('home', compact('teacher'));
 
@@ -52,12 +57,6 @@ class HomeController extends Controller
             $parents = Parents::with(['children'])->withCount('children')->findOrFail($user->parent->id); 
 
             return view('home', compact('parents'));
-
-        } elseif ($user->hasRole('Student')) {
-            
-            $student = Student::with(['user','parent','class','attendances'])->findOrFail($user->student->id); 
-
-            return view('home', compact('student'));
 
         } else {
             return 'NO ROLE ASSIGNED YET!';

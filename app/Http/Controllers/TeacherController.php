@@ -114,6 +114,7 @@ class TeacherController extends Controller
     public function update(Request $request, Teacher $teacher)
     {
         $request->validate([
+            'user_id',
             'name'              => 'required|string|max:255',
             'email'             => 'required|string|email|max:255|unique:users,email,'.$teacher->user_id,
             'gender'            => 'required|string',
@@ -133,12 +134,14 @@ class TeacherController extends Controller
         }
 
         $user->update([
+            'user_id'            => $request->user_id,
             'name'              => $request->name,
             'email'             => $request->email,
             'profile_picture'   => $profile
         ]);
 
         $user->teacher()->update([
+            'user_id'            => $request->user_id,
             'gender'            => $request->gender,
             'phone'             => $request->phone,
             'dateofbirth'       => $request->dateofbirth,

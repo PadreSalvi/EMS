@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="~/Stylesheet/StyleSheet1.css">
+</head>
+<body>
+
+    
+
+
+    <div class="studentregister">
+        <img src="~/images/student.png" />
+        
+        <h1 class="studentregistration"> Student Registration</h1>
+
+        <form action="#">
+            <label class=" label1" for="studid">StudentID </label>
+            <input type="number" id="studid" name="studentid" required>
+            <label class="label2" for="FirstName">FirstName</label>
+            <input type="text" id="FirstName" name="FirstName" required>
+            <label class="label3" for="LastName">LastName</label>
+            <input type="text" id="LastName" name="LastName" required>
+
+            <label class="label4" for="MiddleName">MiddleName</label>
+            <input type="text" id="MiddleName" name="MiddleName" required>
+
+            <label class="label5" for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label class=" label6" for="contact">Contact Number </label>
+            <input type="number" id="contact" name="contact" required>
+
+            <label class=" label7" for="birthday">Birthday</label>
+            <input type="date" id="birthday" name="birthday" required>
+
+            <input type="radio" id="gender" name="gender" required>
+            <label class="label8" for="gender">Gender</label>
+
+            <input type="radio" id="gender2" name="gender" required>
+            <label class="label9" for="gender2"></label>
+
+            <label class="label10" for="students">Status</label>
+            <select name="students" id="students" required>
+                <option value="">Select a Student</option>
+                <option value="old student">Old Student</option>
+                <option value="new student">New Student</option>
+            </select>
+
+            <label class="label11" for="Gradelevel">GradeLevel</label>
+            <select name="GradeLevel" id="GradeLevel" required>
+                <option value="">Select a Grade Level</option>
+                <option value="first year">First Year</option>
+                <option value="second year">Second Year</option>
+                <option value="third year">Third Year</option>
+                <option value="fourth year">Fourth Year</option>
+            </select>
+
+            <label class="label12" for="Transferee">Transferee</label>
+            <select name="Transferee" id="Transferee" required>
+                <option value="">Select a Status</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+
+            </select>
+            <input class="Submit" type="submit" value="Register" required >
+
+        </form>
+        <p class="male">Male</p>
+        <p class="female">Female</p>
+
+  
+
+    </div>
+
+
+</body>
+</html> 

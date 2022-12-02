@@ -1,0 +1,292 @@
+﻿
+body {
+    background-color: whitesmoke;
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.studentregister img {
+    position: absolute;
+    height: 150%;
+    width: 90%;
+    left: 27%;
+    top: -28%;
+}
+.studentregister {
+    color: red;
+    height: 500px;
+    width: 900px;
+    background-color: lightskyblue;
+    position: absolute;
+    left: 20%;
+    top: 16%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.studentregistration {
+    position: absolute;
+    left: 34%;
+    top: 2%;
+    color: white;
+    font-size: 30px;
+
+   
+}
+
+.label1 {
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    color: white;
+    font-size: 20px;
+
+}
+#studid {
+    position: absolute;
+    left: 45%;
+    top: 15%;
+    color: black;
+    font-size: 20px;
+    width:20%;
+    border:0px;
+    outline:none;
+}
+.label2 {
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    color: white;
+    font-size: 20px;
+}
+#FirstName {
+    position: absolute;
+    left: 45%;
+    top: 25%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label3 {
+    position: absolute;
+    left: 25%;
+    top: 35%;
+    color: white;
+    font-size: 20px;
+}
+#LastName {
+    position: absolute;
+    left: 45%;
+    top: 35%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label4 {
+    position: absolute;
+    left: 30%;
+    top: 45%;
+    color: white;
+    font-size: 20px;
+}
+
+#MiddleName {
+    position: absolute;
+    left: 45%;
+    top: 45%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label5 {
+    position: absolute;
+    left: 35%;
+    top: 15%;
+    color: white;
+    font-size: 20px;
+}
+
+#email {
+    position: absolute;
+    left: 65%;
+    top: 14.60%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label6 {
+    position: absolute;
+    left: 30%;
+    top: 55%;
+    color: white;
+    font-size: 20px;
+}
+
+#contact {
+    position: absolute;
+    left: 45%;
+    top: 55%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label7 {
+    position: absolute;
+    left: 25%;
+    top: 65%;
+    color: white;
+    font-size: 20px;
+}
+
+#birthday {
+    position: absolute;
+    left: 45%;
+    top: 65%;
+    color: black;
+    font-size: 20px;
+    border: 0px;
+    outline: none;
+    height: 30px;
+    width: 181px;
+    font-family: Montserrat;
+}
+.label8 {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    color: white;
+    font-size: 20px;
+}
+
+#gender {
+    position: absolute;
+    left: 55%;
+    top: 25.70%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.label9 {
+    position: absolute;
+    left: 5%;
+    top: 85%;
+    color: white;
+    font-size: 20px;
+}
+
+#gender2 {
+    position: absolute;
+    left: 65%;
+    top: 25.70%;
+    color: black;
+    font-size: 20px;
+    width: 20%;
+    border: 0px;
+    outline: none;
+}
+.male {
+    position: absolute;
+    left: 67%;
+    top: 21%;
+    color: white;
+    font-size: 20px;
+}
+.female {
+    position: absolute;
+    left: 77%;
+    top: 21.20%;
+    color: white;
+    font-size: 20px;
+}
+.label10{
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    color: white;
+    font-size: 20px;
+}
+
+
+#students {
+    position: absolute;
+    left: 65%;
+    top: 35%;
+    color: black;
+    font-size: 15px;
+    border: 0px;
+    outline: none;
+    height: 30px;
+    width: 150px;
+    font-family: Montserrat;
+}
+.label11 {
+    position: absolute;
+    left: 50%;
+    top: 45%;
+    color: white;
+    font-size: 20px;
+}
+
+
+#GradeLevel {
+    position: absolute;
+    left: 65%;
+    top: 45%;
+    color: black;
+    font-size: 15px;
+    border: 0px;
+    outline: none;
+    height: 30px;
+    width: 180px;
+    font-family: Montserrat;
+}
+.label12 {
+    position: absolute;
+    left: 50%;
+    top: 55%;
+    color: white;
+    font-size: 20px;
+}
+
+
+#Transferee {
+    position: absolute;
+    left: 65%;
+    top: 55%;
+    color: black;
+    font-size: 15px;
+    border: 0px;
+    outline: none;
+    height: 30px;
+    width: 140px;
+    font-family: Montserrat;
+}
+.Submit {
+    position: absolute;
+    left: 38.50%;
+    top: 83%;
+    font-size: 18px;
+    width: 200px;
+    height: 50px;
+    transition: transform .4s;
+    border: 0px;
+    background-color: #407BFF;
+    color: white;
+    font-family: Montserrat;
+}
+.Submit:hover {
+        transform: scale(1.1);
+    }

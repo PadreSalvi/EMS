@@ -12,7 +12,7 @@ class RoleAssign extends Controller
 
     public function index()
     {
-        $users = User::with('roles')->latest()->paginate(10);
+        $users = User::with('roles',)->latest()->paginate(10);
 
         return view('backend.assignrole.index', compact('users'));
     }

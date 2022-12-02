@@ -11,6 +11,8 @@
 |
 */
 
+use App\Http\Controllers\NewSubjectController;
+
 Route::get('/', function () {
     return redirect('/login');
 });
@@ -41,12 +43,14 @@ Route::group(['middleware' => ['auth','role:Admin']], function ()
     Route::post('assign-subject-to-class/{id}', 'GradeController@storeAssignedSubject')->name('store.class.assign.subject');
 
     Route::resource('assignrole', 'RoleAssign');
-    Route::resource('classes', 'GradeController');
     Route::resource('subject', 'SubjectController');
     Route::resource('teacher', 'TeacherController');
-    Route::resource('parents', 'ParentsController');
-    Route::resource('student', 'StudentController');
-    Route::get('attendance', 'AttendanceController@index')->name('attendance.index');
+    Route::resource('classes', 'GradeController');
+    Route::resource('newsubject', 'NewSubjectController');
+
+    // Route::get('/add/subjects',[NewSubjectController::class, 'create']);
+    // Route::post('/add/subjects',[NewSubjectController::class, 'store']);
+
 
 });
 
@@ -61,6 +65,3 @@ Route::group(['middleware' => ['auth','role:Parent']], function ()
     Route::get('attendance/{attendance}', 'AttendanceController@show')->name('attendance.show');
 });
 
-Route::group(['middleware' => ['auth','role:Student']], function () {
-
-});

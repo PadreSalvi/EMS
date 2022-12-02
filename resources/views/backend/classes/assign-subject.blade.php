@@ -51,23 +51,7 @@
                 </div>
             </form>        
         </div>
-
-        <div class="w-full py-12">
-            <h2 class="text-gray-700 uppercase font-bold my-2">Students</h2>
-            <div class="flex items-center bg-gray-200">
-                <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-semibold">Name</div>
-                <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-semibold">Email</div>
-                <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-semibold">Phone</div>
-                <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-semibold">Parent</div>
-            </div>
-            @foreach ($assigned->students as $student)
-                <div class="flex items-center justify-between border border-gray-200 mb-px">
-                    <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $student->user->name }}</div>
-                    <div class="w-1/4 text-left text-gray-600 py-2 px-4 font-medium">{{ $student->user->email }}</div>
-                    <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-medium">{{ $student->phone }}</div>
-                    <div class="w-1/4 text-right text-gray-600 py-2 px-4 font-medium">{{ $student->parent->user->name }}</div>
-                </div>
-            @endforeach
+        
         </div>
     </div>
 @endsection

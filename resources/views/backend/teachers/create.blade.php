@@ -1,6 +1,6 @@
 @extends('layouts.app')
-
 @section('content')
+
     <div class="roles">
 
         <div class="flex items-center justify-between mb-6">
